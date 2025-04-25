@@ -1,0 +1,426 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Account - FreshMart</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="account.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">FreshMart</div>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="products.html">Products</a></li>
+                <li><a href="cart.html">Cart</a></li>
+                <li><a href="account.html" class="active">My Account</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="account-header">
+            <h1>My Account</h1>
+        </section>
+
+        <section class="account-container">
+            <aside class="account-sidebar">
+                <div class="account-profile">
+                    <div class="profile-picture">
+                        <img src="https://via.placeholder.com/150x150?text=User" alt="Profile Picture">
+                    </div>
+                    <h3 id="user-name">John Doe</h3>
+                    <p id="user-email">john.doe@example.com</p>
+                </div>
+                <ul class="account-menu">
+                    <li class="active" data-tab="dashboard">Dashboard</li>
+                    <li data-tab="orders">My Orders</li>
+                    <li data-tab="profile">Profile Settings</li>
+                    <li data-tab="addresses">Addresses</li>
+                    <li data-tab="payment">Payment Methods</li>
+                </ul>
+                <button id="logout-btn" class="btn logout-btn">Log Out</button>
+            </aside>
+
+            <div class="account-content">
+                <!-- Dashboard Tab -->
+                <div class="account-tab active" id="dashboard-tab">
+                    <h2>Dashboard</h2>
+                    <div class="dashboard-summary">
+                        <div class="summary-card">
+                            <h3>Orders</h3>
+                            <p class="number">5</p>
+                            <p>Total Orders Placed</p>
+                        </div>
+                        <div class="summary-card">
+                            <h3>Pending</h3>
+                            <p class="number">1</p>
+                            <p>Orders Being Processed</p>
+                        </div>
+                        <div class="summary-card">
+                            <h3>Savings</h3>
+                            <p class="number">$12.85</p>
+                            <p>Total Savings to Date</p>
+                        </div>
+                    </div>
+
+                    <div class="recent-orders">
+                        <div class="section-header">
+                            <h3>Recent Orders</h3>
+                            <a href="#" class="view-all" data-tab="orders">View All</a>
+                        </div>
+                        <div class="orders-list">
+                            <div class="order-item">
+                                <div class="order-info">
+                                    <div class="order-id">#ORD-2025-1234</div>
+                                    <div class="order-date">April 18, 2025</div>
+                                    <div class="order-status delivered">Delivered</div>
+                                </div>
+                                <div class="order-summary">
+                                    <p>5 items · $42.76</p>
+                                </div>
+                                <div class="order-actions">
+                                    <button class="btn-small" data-order-id="ORD-2025-1234">Track Order</button>
+                                    <button class="btn-small">View Details</button>
+                                </div>
+                            </div>
+                            <div class="order-item">
+                                <div class="order-info">
+                                    <div class="order-id">#ORD-2025-1156</div>
+                                    <div class="order-date">April 10, 2025</div>
+                                    <div class="order-status delivered">Delivered</div>
+                                </div>
+                                <div class="order-summary">
+                                    <p>3 items · $29.45</p>
+                                </div>
+                                <div class="order-actions">
+                                    <button class="btn-small" data-order-id="ORD-2025-1156">Track Order</button>
+                                    <button class="btn-small">View Details</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Orders Tab -->
+                <div class="account-tab" id="orders-tab">
+                    <h2>My Orders</h2>
+                    <div class="orders-filter">
+                        <button class="filter-btn active" data-filter="all">All Orders</button>
+                        <button class="filter-btn" data-filter="pending">Pending</button>
+                        <button class="filter-btn" data-filter="processing">Processing</button>
+                        <button class="filter-btn" data-filter="shipped">Shipped</button>
+                        <button class="filter-btn" data-filter="delivered">Delivered</button>
+                    </div>
+                    <div class="orders-list">
+                        <div class="order-item">
+                            <div class="order-info">
+                                <div class="order-id">#ORD-2025-1234</div>
+                                <div class="order-date">April 18, 2025</div>
+                                <div class="order-status delivered">Delivered</div>
+                            </div>
+                            <div class="order-summary">
+                                <p>5 items · £42.76</p>
+                            </div>
+                            <div class="order-actions">
+                                <button class="btn-small" data-order-id="ORD-2025-1234">Track Order</button>
+                                <button class="btn-small">View Details</button>
+                            </div>
+                        </div>
+                        <div class="order-item">
+                            <div class="order-info">
+                                <div class="order-id">#ORD-2025-1156</div>
+                                <div class="order-date">April 10, 2025</div>
+                                <div class="order-status delivered">Delivered</div>
+                            </div>
+                            <div class="order-summary">
+                                <p>3 items · $29.45</p>
+                            </div>
+                            <div class="order-actions">
+                                <button class="btn-small" data-order-id="ORD-2025-1156">Track Order</button>
+                                <button class="btn-small">View Details</button>
+                            </div>
+                        </div>
+                        <div class="order-item">
+                            <div class="order-info">
+                                <div class="order-id">#ORD-2025-0983</div>
+                                <div class="order-date">March 27, 2025</div>
+                                <div class="order-status shipped">Out for Delivery</div>
+                            </div>
+                            <div class="order-summary">
+                                <p>7 items · $68.32</p>
+                            </div>
+                            <div class="order-actions">
+                                <button class="btn-small" data-order-id="ORD-2025-0983">Track Order</button>
+                                <button class="btn-small">View Details</button>
+                            </div>
+                        </div>
+                        <div class="order-item">
+                            <div class="order-info">
+                                <div class="order-id">#ORD-2025-0754</div>
+                                <div class="order-date">March 15, 2025</div>
+                                <div class="order-status processing">Processing</div>
+                            </div>
+                            <div class="order-summary">
+                                <p>2 items · $15.48</p>
+                            </div>
+                            <div class="order-actions">
+                                <button class="btn-small" data-order-id="ORD-2025-0754">Track Order</button>
+                                <button class="btn-small">View Details</button>
+                            </div>
+                        </div>
+                        <div class="order-item">
+                            <div class="order-info">
+                                <div class="order-id">#ORD-2025-0621</div>
+                                <div class="order-date">March 5, 2025</div>
+                                <div class="order-status delivered">Delivered</div>
+                            </div>
+                            <div class="order-summary">
+                                <p>4 items · $35.67</p>
+                            </div>
+                            <div class="order-actions">
+                                <button class="btn-small" data-order-id="ORD-2025-0621">Track Order</button>
+                                <button class="btn-small">View Details</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Profile Settings Tab -->
+                <div class="account-tab" id="profile-tab">
+                    <h2>Profile Settings</h2>
+                    <form class="profile-form">
+                        <div class="form-group">
+                            <label for="profile-name">Full Name</label>
+                            <input type="text" id="profile-name" value="John Doe">
+                        </div>
+                        <div class="form-group">
+                            <label for="profile-email">Email</label>
+                            <input type="email" id="profile-email" value="john.doe@example.com">
+                        </div>
+                        <div class="form-group">
+                            <label for="profile-phone">Phone</label>
+                            <input type="tel" id="profile-phone" value="(555) 123-4567">
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="profile-birthday">Birthday</label>
+                                <input type="date" id="profile-birthday" value="1990-06-15">
+                            </div>
+                            <div class="form-group">
+                                <label for="profile-gender">Gender</label>
+                                <select id="profile-gender">
+                                    <option value="male">Male</option>
+                                    <option value="female">Female</option>
+                                    <option value="other">Other</option>
+                                    <option value="prefer-not">Prefer not to say</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="profile-password">Change Password</label>
+                            <input type="password" id="profile-password" placeholder="New password">
+                        </div>
+                        <div class="form-group">
+                            <label for="profile-confirm-password">Confirm Password</label>
+                            <input type="password" id="profile-confirm-password" placeholder="Confirm new password">
+                        </div>
+                        <button type="submit" class="btn save-btn">Save Changes</button>
+                    </form>
+                </div>
+
+                <!-- Addresses Tab -->
+                <div class="account-tab" id="addresses-tab">
+                    <h2>My Addresses</h2>
+                    <div class="addresses-container">
+                        <div class="address-card default">
+                            <div class="address-tag">Default</div>
+                            <h3>Home</h3>
+                            <p>John Doe<br>
+                            123 Main Street<br>
+                            Apt 4B<br>
+                            Cityville, ST 12345<br>
+                            United States<br>
+                            (555) 123-4567</p>
+                            <div class="address-actions">
+                                <button class="btn-small">Edit</button>
+                                <button class="btn-small delete-btn">Delete</button>
+                            </div>
+                        </div>
+                        <div class="address-card">
+                            <h3>Work</h3>
+                            <p>John Doe<br>
+                            456 Office Plaza<br>
+                            Suite 201<br>
+                            Cityville, ST 12345<br>
+                            United States<br>
+                            (555) 987-6543</p>
+                            <div class="address-actions">
+                                <button class="btn-small">Edit</button>
+                                <button class="btn-small delete-btn">Delete</button>
+                                <button class="btn-small">Set as Default</button>
+                            </div>
+                        </div>
+                        <div class="address-card add-new">
+                            <div class="add-address">
+                                <span class="plus-icon">+</span>
+                                <p>Add New Address</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Payment Methods Tab -->
+                <div class="account-tab" id="payment-tab">
+                    <h2>Payment Methods</h2>
+                    <div class="payment-methods-container">
+                        <div class="payment-card default">
+                            <div class="payment-tag">Default</div>
+                            <div class="card-icon visa"></div>
+                            <div class="card-details">
+                                <p class="card-number">•••• •••• •••• 4567</p>
+                                <p class="card-expiry">Expires 09/2026</p>
+                                <p class="card-name">John Doe</p>
+                            </div>
+                            <div class="payment-actions">
+                                <button class="btn-small">Edit</button>
+                                <button class="btn-small delete-btn">Delete</button>
+                            </div>
+                        </div>
+                        <div class="payment-card">
+                            <div class="card-icon mastercard"></div>
+                            <div class="card-details">
+                                <p class="card-number">•••• •••• •••• 8901</p>
+                                <p class="card-expiry">Expires 12/2025</p>
+                                <p class="card-name">John Doe</p>
+                            </div>
+                            <div class="payment-actions">
+                                <button class="btn-small">Edit</button>
+                                <button class="btn-small delete-btn">Delete</button>
+                                <button class="btn-small">Set as Default</button>
+                            </div>
+                        </div>
+                        <div class="payment-card add-new">
+                            <div class="add-payment">
+                                <span class="plus-icon">+</span>
+                                <p>Add New Payment Method</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Order Tracking Modal -->
+    <div id="tracking-modal" class="modal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <h2>Order Tracking</h2>
+            <div class="order-details">
+                <p class="tracking-order-id">Order #ORD-2025-1234</p>
+                <p class="tracking-order-date">Placed on April 18, 2025</p>
+            </div>
+            <div class="tracking-timeline">
+                <div class="tracking-step completed">
+                    <div class="step-icon">
+                        <span class="step-number">1</span>
+                    </div>
+                    <div class="step-content">
+                        <h4>Order Placed</h4>
+                        <p>April 18, 2025 - 10:23 AM</p>
+                    </div>
+                </div>
+                <div class="tracking-step completed">
+                    <div class="step-icon">
+                        <span class="step-number">2</span>
+                    </div>
+                    <div class="step-content">
+                        <h4>Order Confirmed</h4>
+                        <p>April 18, 2025 - 10:30 AM</p>
+                    </div>
+                </div>
+                <div class="tracking-step completed">
+                    <div class="step-icon">
+                        <span class="step-number">3</span>
+                    </div>
+                    <div class="step-content">
+                        <h4>Order Processed</h4>
+                        <p>April 18, 2025 - 11:45 AM</p>
+                    </div>
+                </div>
+                <div class="tracking-step completed">
+                    <div class="step-icon">
+                        <span class="step-number">4</span>
+                    </div>
+                    <div class="step-content">
+                        <h4>Order Shipped</h4>
+                        <p>April 18, 2025 - 2:15 PM</p>
+                    </div>
+                </div>
+                <div class="tracking-step current">
+                    <div class="step-icon">
+                        <span class="step-number">5</span>
+                    </div>
+                    <div class="step-content">
+                        <h4>Out for Delivery</h4>
+                        <p>April 19, 2025 - 9:30 AM</p>
+                    </div>
+                </div>
+                <div class="tracking-step">
+                    <div class="step-icon">
+                        <span class="step-number">6</span>
+                    </div>
+                    <div class="step-content">
+                        <h4>Delivered</h4>
+                        <p>Estimated: April 19, 2025</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Simplified Footer -->
+    <footer>
+        <div class="footer-container">
+            <div class="footer-info">
+                <div class="footer-logo">FreshMart</div>
+                <p>Your neighborhood grocery store, bringing fresh quality products to your doorstep since 2010.</p>
+                <div class="social-links">
+                    <a href="#" aria-label="Facebook">Facebook</a>
+                    <a href="#" aria-label="Instagram">Instagram</a>
+                    <a href="#" aria-label="Twitter">Twitter</a>
+                </div>
+            </div>
+            <div class="footer-links">
+                <div class="footer-column">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="products.html">Shop</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Customer Service</h3>
+                    <ul>
+                        <li><a href="delivery.html">Delivery Information</a></li>
+                        <li><a href="returns.html">Returns Policy</a></li>
+                        <li><a href="faq.html">FAQ</a></li>
+                        <li><a href="terms.html">Terms & Conditions</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 FreshMart. All rights reserved.</p>
+        </div>
+    </footer>
+    
+    <script src="script.js"></script>
+    <script src="account.js"></script>
+</body>
+</html>

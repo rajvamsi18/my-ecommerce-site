@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Details - FreshMart</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="product-detail.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">FreshMart</div>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="products.html">Products</a></li>
+                <li><a href="cart.html">Cart</a></li>
+                <li><a href="account.html">My Account</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <div class="breadcrumb">
+            <a href="index.html">Home</a> &gt; 
+            <a href="products.html">Products</a> &gt; 
+            <span id="product-breadcrumb-name">Product Name</span>
+        </div>
+
+        <section class="product-detail-container">
+            <div class="product-gallery">
+                <div class="main-image-container">
+                    <img id="main-product-image" src="https://via.placeholder.com/600x600" alt="Product Image">
+                </div>
+                <div class="thumbnail-gallery" id="thumbnail-gallery">
+                    <!-- Thumbnails will be added here by JavaScript -->
+                </div>
+            </div>
+
+            <div class="product-info">
+                <span class="product-category" id="product-category">Category</span>
+                <h1 id="product-name">Product Name</h1>
+                <div class="product-brand" id="product-brand">Brand Name</div>
+                <div class="product-price">£<span id="product-price">0.00</span></div>
+                
+                <div class="product-description" id="product-description">
+                    Product description will be displayed here.
+                </div>
+                
+                <div class="quantity-selector">
+                    <label for="quantity">Quantity:</label>
+                    <div class="quantity-controls">
+                        <button id="decrease-quantity">-</button>
+                        <input type="number" id="quantity" value="1" min="1">
+                        <button id="increase-quantity">+</button>
+                    </div>
+                </div>
+                
+                <button id="add-to-cart-btn" class="btn add-to-cart-btn">Add to Cart</button>
+            </div>
+        </section>
+
+        <section class="product-tabs">
+            <div class="tab-headers">
+                <button class="tab-header active" data-tab="details">Details</button>
+                <button class="tab-header" data-tab="ingredients">Ingredients</button>
+                <button class="tab-header" data-tab="reviews">Reviews</button>
+            </div>
+            
+            <div class="tab-content active" id="details-tab">
+                <div id="product-details">
+                    Detailed product information will be displayed here.
+                </div>
+            </div>
+            
+            <div class="tab-content" id="ingredients-tab">
+                <div id="product-ingredients">
+                    Product ingredients will be displayed here.
+                </div>
+            </div>
+            
+            <div class="tab-content" id="reviews-tab">
+                <div class="reviews-container">
+                    <div class="review-form">
+                        <h3>Write a Review</h3>
+                        <div class="rating-selector">
+                            <span>Your Rating:</span>
+                            <div class="stars">
+                                <span class="star" data-rating="1">★</span>
+                                <span class="star" data-rating="2">★</span>
+                                <span class="star" data-rating="3">★</span>
+                                <span class="star" data-rating="4">★</span>
+                                <span class="star" data-rating="5">★</span>
+                            </div>
+                        </div>
+                        <textarea placeholder="Share your thoughts about this product..."></textarea>
+                        <button class="btn submit-review-btn">Submit Review</button>
+                    </div>
+                    
+                    <div class="product-reviews" id="product-reviews">
+                        <!-- Reviews will be added here -->
+                        <div class="no-reviews">No reviews yet. Be the first to review this product!</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="related-products">
+            <h2>Related Products</h2>
+            <div class="product-grid" id="related-products-grid">
+                <!-- Related products will be added here by JavaScript -->
+            </div>
+        </section>
+    </main>
+
+    <!-- Simplified Footer -->
+    <footer>
+        <div class="footer-container">
+            <div class="footer-info">
+                <div class="footer-logo">FreshMart</div>
+                <p>Your neighborhood grocery store, bringing fresh quality products to your doorstep since 2010.</p>
+                <div class="social-links">
+                    <a href="https://facebook.com/" target="_blank" rel="noopener noreferrer" aria-label="Facebook">Facebook</a>
+                    <a href="https://instagram.com/" target="_blank" rel="noopener noreferrer" aria-label="Instagram">Instagram</a>
+                    <a href="https://twitter.com/" target="_blank" rel="noopener noreferrer" aria-label="Twitter">Twitter</a>
+                </div>
+            </div>
+            <div class="footer-links">
+                <div class="footer-column">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="products.html">Shop</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Customer Service</h3>
+                    <ul>
+                        <li><a href="delivery.html">Delivery Information</a></li>
+                        <li><a href="returns.html">Returns Policy</a></li>
+                        <li><a href="faq.html">FAQ</a></li>
+                        <li><a href="terms.html">Terms & Conditions</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 FreshMart. All rights reserved.</p>
+        </div>
+    </footer>
+    
+    <script src="script.js"></script>
+    <script src="product-detail.js"></script>
+</body>
+</html>
